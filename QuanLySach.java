@@ -1,0 +1,25 @@
+import java.util.ArrayList;
+public class QuanLySach 
+{
+    private ArrayList<Sach> danhSachSach;
+
+    public QuanLySach() {
+        danhSachSach = new ArrayList<>();
+    }
+
+    public void themSach(Sach sach) {
+        danhSachSach.add(sach);
+    }
+
+    public void hienThiDanhSachSach() {
+        if (danhSachSach.isEmpty()) {
+            System.out.println("Danh sach trong.");
+        } else {
+            for (Sach s : danhSachSach) {
+                System.out.println(s.toString());
+                System.out.println("Gia ban uoc tinh: " + s.tinhGiaBan() + " VND");
+                System.out.println("--------------------------------------");
+            }
+        }
+    }
+}
